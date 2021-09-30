@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, Platform } from 'react-native';
 
 const TitleText = (props) => (
   <Text style={{ ...styles.title, ...props.style }}>{props.children}</Text>

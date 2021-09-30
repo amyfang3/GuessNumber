@@ -1,3 +1,7 @@
+// splitting into platform-specific files could be useful if the different platforms are verry different
+// React-native will automatically choose the platform specific file
+// using .android.js and .ios.js files are alternatives to using a single MainButton.js file
+
 import React from 'react';
 import {
   StyleSheet,
@@ -12,7 +16,7 @@ import Colors from '../constants/colors';
 const MainButton = (props) => {
   let ButtonComponent = TouchableOpacity;
 
-  if (Platform.OS === 'android' && Platform.Version >= 21) {
+  if (Platform.Version >= 21) {
     ButtonComponent = TouchableNativeFeedback;
   }
 
